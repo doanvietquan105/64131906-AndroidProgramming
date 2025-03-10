@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,7 +35,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             String strSo1 = edtSoA.getText().toString();
-            String
+            String strSo2 = edtSoB.getText().toString();
+            double soA = Double.parseDouble(strSo1);
+            double soB = Double.parseDouble(strSo2);
+
+            double tong = soA/soB;
+            String strKQ = String.valueOf(tong);
+            tvKetQua.setText(strKQ);
         }
     }
     void TimView(){
@@ -44,5 +51,6 @@ public class MainActivity extends AppCompatActivity {
         btnTru = (Button) findViewById(R.id.btnTru);
         btnNhan = (Button) findViewById(R.id.btnNhan);
         btnChia = (Button) findViewById(R.id.btnChia);
+        tvKetQua = (TextView) findViewById(R.id.textViewKQ);
     }
 }

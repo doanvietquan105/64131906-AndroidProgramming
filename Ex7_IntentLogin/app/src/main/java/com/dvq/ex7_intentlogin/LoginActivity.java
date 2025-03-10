@@ -44,10 +44,16 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (tenDangNhap.equals("doanvietquan") && mk.equals("123"))
                 {
-                    Intent iQuiz = new 
+                    //Chuyển sang màn hình home
+                    Intent iQuiz = new Intent(LoginActivity.this, HomeActivity.class);
+                    //Gói dữ liệu vào iQuiz, dạng key - value
+                    iQuiz.putExtra("ten_dang_nhap",tenDangNhap);
+                    iQuiz.putExtra("mk_dang_nhap",mk);
+                    //
+                    startActivity(iQuiz);
                 }
                 else{
-                    Toast.makeText(LoginActivity.this, "BẠN NHẬP SAI THÔNG TIN",Toast.LENGTH_LONG)
+                    Toast.makeText(LoginActivity.this, "BẠN NHẬP SAI THÔNG TIN",Toast.LENGTH_LONG);
                 }
             }
         });

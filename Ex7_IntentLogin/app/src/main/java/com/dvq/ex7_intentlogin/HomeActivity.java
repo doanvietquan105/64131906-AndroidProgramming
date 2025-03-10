@@ -1,6 +1,8 @@
 package com.dvq.ex7_intentlogin;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,9 @@ public class HomeActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Intent intentTuLogin = getIntent();
+        String tenDN_NhanDuoc = intentTuLogin.getStringExtra("ten_dang_nhap");
+        TextView tvTenDN = (TextView) findViewById(R.id.tvUsername);
+        tvTenDN.setText(tenDN_NhanDuoc);
     }
 }

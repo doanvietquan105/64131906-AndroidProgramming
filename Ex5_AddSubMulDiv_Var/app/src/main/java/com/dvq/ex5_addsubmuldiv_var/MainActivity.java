@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     EditText edtSoA;
     EditText edtSoB;
     Button btnCong, btnTru, btnNhan, btnChia;
-
+    TextView tvKetQua;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         TimView();
+        btnCong.setOnClickListener(boLangNghe_XuLyCong);
+        btnTru.setOnClickListener(boLangNghe_XuLyTru);
+        btnNhan.setOnClickListener(boLangNghe_XuLyNhan);
+        btnChia.setOnClickListener(boLangNghe_XuLyChia);
     }
 
     View.OnClickListener boLangNghe_XuLyCong = new View.OnClickListener() {
@@ -39,11 +43,50 @@ public class MainActivity extends AppCompatActivity {
             double soA = Double.parseDouble(strSo1);
             double soB = Double.parseDouble(strSo2);
 
-            double tong = soA/soB;
+            double tong = soA+soB;
             String strKQ = String.valueOf(tong);
             tvKetQua.setText(strKQ);
         }
-    }
+    };
+    View.OnClickListener boLangNghe_XuLyTru = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String strSo1 = edtSoA.getText().toString();
+            String strSo2 = edtSoB.getText().toString();
+            double soA = Double.parseDouble(strSo1);
+            double soB = Double.parseDouble(strSo2);
+
+            double hieu = soA-soB;
+            String strKQ = String.valueOf(hieu);
+            tvKetQua.setText(strKQ);
+        }
+    };
+    View.OnClickListener boLangNghe_XuLyNhan = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String strSo1 = edtSoA.getText().toString();
+            String strSo2 = edtSoB.getText().toString();
+            double soA = Double.parseDouble(strSo1);
+            double soB = Double.parseDouble(strSo2);
+
+            double tich = soA*soB;
+            String strKQ = String.valueOf(tich);
+            tvKetQua.setText(strKQ);
+        }
+    };
+    View.OnClickListener boLangNghe_XuLyChia= new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String strSo1 = edtSoA.getText().toString();
+            String strSo2 = edtSoB.getText().toString();
+            double soA = Double.parseDouble(strSo1);
+            double soB = Double.parseDouble(strSo2);
+
+            double thuong = soA/soB;
+            String strKQ = String.valueOf(thuong);
+            tvKetQua.setText(strKQ);
+        }
+    };
     void TimView(){
         edtSoA = (EditText) findViewById(R.id.editTextA);
         edtSoB = (EditText) findViewById(R.id.editTextB);

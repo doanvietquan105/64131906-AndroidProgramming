@@ -35,4 +35,22 @@
         android:layout_height="164dp"
         android:background="#9C27B0"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUIZ 1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUIZ 2"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUIZ 3"/>
+    </LinearLayout>
 </LinearLayout>

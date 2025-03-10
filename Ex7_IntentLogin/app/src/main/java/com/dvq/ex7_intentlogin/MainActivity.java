@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Lệnh xử lý ở đây
                 Intent iLogin = new Intent(MainActivity.this, LoginActivity.class);
-                androi
+                startActivity(iLogin);
             }
         });
     }

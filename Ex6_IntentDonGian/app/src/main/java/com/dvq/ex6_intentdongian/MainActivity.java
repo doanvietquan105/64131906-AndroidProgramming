@@ -1,5 +1,6 @@
 package com.dvq.ex6_intentdongian;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,8 +33,20 @@ public class MainActivity extends AppCompatActivity {
         //Gắn bộ lắng nghe sự kiện
         nutMH2.setOnClickListener(new View.OnClickListener() {
             @Override
+            public void onClick(View view) {
+                //Xử lý chuyển màn hình
+                //B1. Tạo một Intent
+                Intent intentMH2 = new Intent(MainActivity.this, MH2Activity.class);
+                startActivity(intentMH2);
+            }
+        });
+        nutMH3.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 //Xử lý chuyển màn hình
+                //B1. Tạo một Intent
+                Intent intentMH3 = new Intent(MainActivity.this, MH3Activity.class);
+                startActivity(intentMH3);
             }
         });
     }

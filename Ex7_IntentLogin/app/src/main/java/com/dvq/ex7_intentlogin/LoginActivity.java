@@ -1,9 +1,11 @@
 package com.dvq.ex7_intentlogin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,8 +32,23 @@ public class LoginActivity extends AppCompatActivity {
         btnXacNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Xử lý dăng nhập
+                //Lấy dữ liệu
+                //B1. Tìm tham chiếu đến đk
                 EditText edTenDN = (EditText) findViewById(R.id.edtUsername);
                 EditText edPass = (EditText) findViewById(R.id.edtPass);
+                //B2. Lấy dữ liệu
+                String tenDangNhap = edTenDN.getText().toString();
+                String mk = edPass.getText().toString();
+                //Kiểm tra mật khẩu
+
+                if (tenDangNhap.equals("doanvietquan") && mk.equals("123"))
+                {
+                    Intent iQuiz = new 
+                }
+                else{
+                    Toast.makeText(LoginActivity.this, "BẠN NHẬP SAI THÔNG TIN",Toast.LENGTH_LONG)
+                }
             }
         });
     }

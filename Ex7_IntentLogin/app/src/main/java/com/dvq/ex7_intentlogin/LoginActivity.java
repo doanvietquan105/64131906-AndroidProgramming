@@ -1,6 +1,9 @@
 package com.dvq.ex7_intentlogin;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +22,17 @@ public class LoginActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        EditText edTenDN = (EditText) findViewById(R.id.edtUsername);
+        EditText edPass = (EditText) findViewById(R.id.edtPass);
+        Button btnXacNhan = (Button) findViewById(R.id.btnOK);
+
+        btnXacNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText edTenDN = (EditText) findViewById(R.id.edtUsername);
+                EditText edPass = (EditText) findViewById(R.id.edtPass);
+            }
         });
     }
 }

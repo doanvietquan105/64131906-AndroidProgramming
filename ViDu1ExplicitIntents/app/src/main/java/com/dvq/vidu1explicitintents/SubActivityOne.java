@@ -22,8 +22,8 @@ public class SubActivityOne extends AppCompatActivity {
     public void QuayVe(View v){
         //Tạo một đối tượng Intent
         //Tham số thứ 2 của hàm tạo này, là tên Activity (màn hình) ta muốn chuyển sang
-        Intent iManHinhChinh = new Intent(this, MainActivity.class);
+        Intent iManHinhCHINH = new Intent(this, MainActivity.class);
         //Thực hiện chuyển
-        startActivity(iManHinhChinh);
+        startActivity(iManHinhCHINH);
     }
 }

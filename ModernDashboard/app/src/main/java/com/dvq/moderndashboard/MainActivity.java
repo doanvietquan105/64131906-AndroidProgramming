@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         clothingCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ActivityClothing.class);
+                Intent intent = new Intent(MainActivity.this, ClothingActivity.class);
                 startActivity(intent);
             }
         });

@@ -62,62 +62,32 @@ public class MainActivity extends AppCompatActivity {
     }
     //Xử lý trừ
     public void XuLyTru(View v) {
-//Code xử lý cộng ở đây
-        //b1. lấy dữ liệu 2 số
-        //b1.1. tìm EditText số 1 và số 2
-        //b1.2. lấy dữ liệu từ 2 đkhiển đó
         String soThu1= editTextSo1.getText().toString();
         String soThu2= editTextSo2.getText().toString();
-        //b1.3. chuyển dữ liệu từ chuỗi sang số
         float soA = Float.parseFloat(soThu1);
         float soB = Float.parseFloat(soThu2);
-        //b2. tính toán
         float Hieu = soA - soB;
-        //b3. Hiện kết quả
-        //b3.1.
-        //b3.2 chuẩn bị dữ liệu xuất, biến thành dạng chuỗi
         String chuoiKQ = String.valueOf(Hieu);
-        //b3.3 gắn kết quả lên đk
         editTextKQ.setText(chuoiKQ);
     }
     //Xử lý nhân
     public void XuLyNhan(View v) {
-//Code xử lý cộng ở đây
-        //b1. lấy dữ liệu 2 số
-        //b1.1. tìm EditText số 1 và số 2
-        //b1.2. lấy dữ liệu từ 2 đkhiển đó
         String soThu1= editTextSo1.getText().toString();
         String soThu2= editTextSo2.getText().toString();
-        //b1.3. chuyển dữ liệu từ chuỗi sang số
         float soA = Float.parseFloat(soThu1);
         float soB = Float.parseFloat(soThu2);
-        //b2. tính toán
         float Tich = soA * soB;
-        //b3. Hiện kết quả
-        //b3.1.
-        //b3.2 chuẩn bị dữ liệu xuất, biến thành dạng chuỗi
         String chuoiKQ = String.valueOf(Tich);
-        //b3.3 gắn kết quả lên đk
         editTextKQ.setText(chuoiKQ);
     }
     //Xử lý chia
     public void XuLyChia(View v) {
-//Code xử lý cộng ở đây
-        //b1. lấy dữ liệu 2 số
-        //b1.1. tìm EditText số 1 và số 2
-        //b1.2. lấy dữ liệu từ 2 đkhiển đó
         String soThu1= editTextSo1.getText().toString();
         String soThu2= editTextSo2.getText().toString();
-        //b1.3. chuyển dữ liệu từ chuỗi sang số
         float soA = Float.parseFloat(soThu1);
         float soB = Float.parseFloat(soThu2);
-        //b2. tính toán
         float Thuong = soA / soB;
-        //b3. Hiện kết quả
-        //b3.1.
-        //b3.2 chuẩn bị dữ liệu xuất, biến thành dạng chuỗi
         String chuoiKQ = String.valueOf(Thuong);
-        //b3.3 gắn kết quả lên đk
         editTextKQ.setText(chuoiKQ);
     }
 }

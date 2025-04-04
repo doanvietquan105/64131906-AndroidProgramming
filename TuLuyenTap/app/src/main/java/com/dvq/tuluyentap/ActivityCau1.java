@@ -49,7 +49,7 @@ public class ActivityCau1 extends AppCompatActivity {
         String so2 = editTextSoB.getText().toString();
         float num1 = Float.parseFloat(so1);
         float num2 = Float.parseFloat(so2);
-        float tong = num1 + num2;
+        float tong  = num1 + num2;
         String chuoiKQ = String.valueOf(tong);
         editTextKQ.setText(chuoiKQ);
     }

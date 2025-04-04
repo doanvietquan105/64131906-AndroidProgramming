@@ -1,6 +1,9 @@
 package thigk2.doanvietquan;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +13,16 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ActivityCN2 extends AppCompatActivity {
 
+    EditText editTextGK;
+    EditText editTextCK;
+    Button tinhTB;
+    EditText editTextKQ;
+    void TimDieuKhien(){
+        editTextGK = findViewById(R.id.edtDGK);
+        editTextCK = findViewById(R.id.edtDCK);
+        editTextKQ = findViewById(R.id.edtKQ);
+        tinhTB = findViewById(R.id.btnTinhTB);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
